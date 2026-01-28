@@ -17,4 +17,4 @@ spec:
   source:
     path: mailpit
     repoURL: https://github.com/Yannig/argocd-example.git
-    targetRevision: v1.0.0
+    targetRevision: v1.0.1
