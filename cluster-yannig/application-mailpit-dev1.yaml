@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mail-integration
+  name: mail-dev1
   namespace: argo-cd
 spec:
   syncPolicy:
