@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mail-integration
+  namespace: argo-cd
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  destination:
+    namespace: integration
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: mailpit
+    repoURL: https://github.com/Yannig/argocd-example.git
+    targetRevision: integration
